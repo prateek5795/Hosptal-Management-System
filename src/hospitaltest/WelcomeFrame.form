@@ -1,0 +1,2409 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup_gender">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup_edit_gender">
+    </Component>
+    <Container class="javax.swing.JPopupMenu" name="popupMenu_tablePatients">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="mi_patient_edit">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Edit"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mi_patient_editActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="mi_patient_delete">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Delete"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mi_patient_deleteActionPerformed"/>
+          </Events>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPopupMenu" name="popupMenu_tableEmployees">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="mi_emp_edit">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Edit"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mi_emp_editActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="mi_emp_delete">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Delete"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mi_emp_deleteActionPerformed"/>
+          </Events>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="editFrame_patients">
+      <Properties>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Default Cursor"/>
+        </Property>
+        <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+          <Point value="[0, 0]"/>
+        </Property>
+        <Property name="resizable" type="boolean" value="false"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[750, 550]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="b_updatePatient" min="-2" pref="200" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                          <Component id="b_cancelPatient" min="-2" pref="200" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="label_edit_name" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edit_age" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edit_mobile" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edit_disease" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edit_address" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edit_date" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edit_gender" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edit_bloodGroup" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edit_maritalStatus" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="cb_edit_maritalStatus" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="cb_edit_bloodGroup" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_edit_date" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="rb_edit_male" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="rb_edit_female" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="rb_edit_other" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Component id="tf_edit_address" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="tf_edit_disease" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="tf_edit_mobile" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="tf_edit_age" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="tf_edit_name" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="tf_edit_other_gender" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="tf_edit_other_bloodGroup" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="260" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="53" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tf_edit_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_edit_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tf_edit_age" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_edit_age" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tf_edit_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_edit_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tf_edit_disease" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_edit_disease" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tf_edit_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_edit_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tf_edit_date" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_edit_date" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="rb_edit_male" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rb_edit_female" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rb_edit_other" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_edit_other_gender" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_edit_gender" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cb_edit_bloodGroup" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_edit_other_bloodGroup" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_edit_bloodGroup" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cb_edit_maritalStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_edit_maritalStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="b_updatePatient" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="b_cancelPatient" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="label_edit_name">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Name"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_age">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Age"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_mobile">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Mobile"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_disease">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Disease"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_address">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Address"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_date">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Date (yyyy-mm-dd)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_gender">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gender"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_bloodGroup">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Blood Group"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_maritalStatus">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Marital Status"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cb_edit_maritalStatus">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="5">
+                <StringItem index="0" value="Select"/>
+                <StringItem index="1" value="Single"/>
+                <StringItem index="2" value="Married"/>
+                <StringItem index="3" value="Divorced"/>
+                <StringItem index="4" value="Widowed"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cb_edit_bloodGroup">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="10">
+                <StringItem index="0" value="Select"/>
+                <StringItem index="1" value="O+"/>
+                <StringItem index="2" value="O-"/>
+                <StringItem index="3" value="A+"/>
+                <StringItem index="4" value="A-"/>
+                <StringItem index="5" value="B+"/>
+                <StringItem index="6" value="B-"/>
+                <StringItem index="7" value="AB+"/>
+                <StringItem index="8" value="AB-"/>
+                <StringItem index="9" value="Other"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cb_edit_bloodGroupActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_other_bloodGroup">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="tf_other_bloodGroup.setVisible(false);"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_other_gender">
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tf_edit_other_genderMouseClicked"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="tf_other_gender.setVisible(false);"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rb_edit_other">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup_edit_gender"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Other"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rb_edit_otherActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rb_edit_female">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup_edit_gender"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Female"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rb_edit_femaleActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="rb_edit_male">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup_edit_gender"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Male"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rb_edit_maleActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_date">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_edit_dateActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_address">
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_disease">
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_mobile">
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_age">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_edit_ageActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_name">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_edit_nameActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="b_updatePatient">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Update"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_updatePatientActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="b_cancelPatient">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_cancelPatientActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Update Values"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="editFrame_employees">
+      <Properties>
+        <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+          <Point value="[0, 0]"/>
+        </Property>
+        <Property name="resizable" type="boolean" value="false"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[750, 550]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace pref="107" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="label_edit_empForm_name" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="label_edit_empForm_mobile" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="label_edit_empForm_designation" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="label_edit_empForm_empID" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="label_edit_empForm_address" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="label_edit_empForm_noOfLeaves" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="label_edit_empForm_salary" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="label_edit_empForm_totalAttendance" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="label_edit_empForm_resumeFile" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="123" pref="123" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="tf_edit_empForm_name" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_edit_empForm_mobile" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_edit_empForm_designation" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_edit_empForm_empID" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_edit_empForm_address" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_edit_empForm_noOfLeaves" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_edit_empForm_salary" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_edit_empForm_totalAttendance" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="b_edit_empForm_resumeSelect" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="b_updatePatient1" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Component id="b_cancelPatient1" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="305" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="label_edit_empForm_filePath" min="-2" pref="337" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="64" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="label_edit_empForm_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_edit_empForm_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="label_edit_empForm_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_edit_empForm_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="label_edit_empForm_designation" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_edit_empForm_designation" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="label_edit_empForm_empID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_edit_empForm_empID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="label_edit_empForm_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_edit_empForm_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="label_edit_empForm_noOfLeaves" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_edit_empForm_noOfLeaves" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="label_edit_empForm_salary" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_edit_empForm_salary" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="label_edit_empForm_totalAttendance" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_edit_empForm_totalAttendance" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="label_edit_empForm_resumeFile" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="b_edit_empForm_resumeSelect" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="label_edit_empForm_filePath" min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="b_updatePatient1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="b_cancelPatient1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="label_edit_empForm_name">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Name"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_empForm_mobile">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Mobile"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_empForm_designation">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Designation"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_empForm_empID">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Emp ID"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_empForm_address">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Address"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_empForm_noOfLeaves">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="No. of Leaves"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_empForm_salary">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Salary"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_empForm_totalAttendance">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Total Attendance"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_empForm_resumeFile">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Resume File"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_empForm_name">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_edit_empForm_nameActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_empForm_mobile">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_edit_empForm_mobileActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_empForm_designation">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_edit_empForm_designationActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_empForm_empID">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_edit_empForm_empIDActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_empForm_address">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_edit_empForm_addressActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_empForm_noOfLeaves">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_edit_empForm_noOfLeavesActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_empForm_salary">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_edit_empForm_salaryActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_edit_empForm_totalAttendance">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_edit_empForm_totalAttendanceActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="b_edit_empForm_resumeSelect">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Select..."/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_edit_empForm_resumeSelectActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label_edit_empForm_filePath">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Update Values"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="b_updatePatient1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Update"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_updatePatient1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="b_cancelPatient1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_cancelPatient1ActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowClosed" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosed"/>
+    <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosing"/>
+    <EventHandler event="windowOpened" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowOpened"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="panel_header" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Component id="panel_mainMenu" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="panel_subMenu" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="panel_parent" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="panel_header" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="panel_mainMenu" max="32767" attributes="0"/>
+                  <Component id="panel_subMenu" max="32767" attributes="0"/>
+                  <Component id="panel_parent" alignment="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="panel_header">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="c0" green="c0" id="lightGray" palette="1" red="c0" type="palette"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="label_title" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="557" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="label_title" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="38" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="label_title">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="36" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Welcome to Jindal Institute of Medical Sciences"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="panel_mainMenu">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="b_newPatient" alignment="0" pref="176" max="32767" attributes="0"/>
+                      <Component id="b_employee" alignment="0" max="32767" attributes="0"/>
+                      <Component id="b_admin" alignment="0" max="32767" attributes="0"/>
+                      <Component id="b_information" alignment="1" max="32767" attributes="0"/>
+                      <Component id="b_oldPatient" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="b_information" min="-2" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="b_admin" min="-2" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="b_employee" min="-2" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="b_newPatient" min="-2" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="b_oldPatient" min="-2" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="b_information">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Information"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_informationActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="b_admin">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Admin"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_adminActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="b_employee">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Employee"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_employeeActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="b_newPatient">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="New Patient"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_newPatientActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="b_oldPatient">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Old Patient"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_oldPatientActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="panel_subMenu">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="panel_subMenu_blank">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card4"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="958" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panel_subMenu_admin">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card2"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="b_subMenu_admin_logout" alignment="1" max="32767" attributes="0"/>
+                          <Component id="b_subMenu_admin_addPatient" alignment="0" max="32767" attributes="0"/>
+                          <Component id="b_subMenu_admin_addEmployee" alignment="1" pref="176" max="32767" attributes="0"/>
+                          <Component id="b_subMenu_admin_viewPatientsList" alignment="0" max="32767" attributes="0"/>
+                          <Component id="b_subMenu_admin_viewEmployeeList" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                      <Component id="b_subMenu_admin_addEmployee" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="b_subMenu_admin_addPatient" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="b_subMenu_admin_viewEmployeeList" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="b_subMenu_admin_viewPatientsList" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="b_subMenu_admin_logout" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace pref="615" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="b_subMenu_admin_addEmployee">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add Employee"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_subMenu_admin_addEmployeeActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_subMenu_admin_addPatient">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add Patient"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_subMenu_admin_addPatientActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_subMenu_admin_viewPatientsList">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Patients List"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_subMenu_admin_viewPatientsListActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_subMenu_admin_viewEmployeeList">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Employee List"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_subMenu_admin_viewEmployeeListActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_subMenu_admin_logout">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Logout"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_subMenu_admin_logoutActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panel_subMenu_employee">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card3"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="b_subMenu_employee_logout" max="32767" attributes="0"/>
+                          <Component id="b_subMenu_employee_addPatient" pref="176" max="32767" attributes="0"/>
+                          <Component id="b_subMenu_employee_viewPatientsList" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                      <Component id="b_subMenu_employee_addPatient" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="b_subMenu_employee_viewPatientsList" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="b_subMenu_employee_logout" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace pref="673" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="b_subMenu_employee_addPatient">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add Patient"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_subMenu_employee_addPatientActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_subMenu_employee_viewPatientsList">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Patients List"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_subMenu_employee_viewPatientsListActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_subMenu_employee_logout">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Logout"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_subMenu_employee_logoutActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="panel_parent">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="panel_information">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card2"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="254" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="label_info_faxTitle3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_info_faxTitle4" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="label_info_bannerImage" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label_info_addressTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_info_phoneTitle" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_info_faxTitle" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_info_faxTitle1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_info_faxTitle2" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label_info_phone" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_info_address" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_info_fax" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_info_fax1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_info_fax2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="606" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="label_info_bannerImage" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_info_addressTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_info_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_info_phone" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_info_phoneTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_info_fax" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_info_faxTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_info_fax1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_info_faxTitle1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_info_fax2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_info_faxTitle2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_info_faxTitle3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_info_faxTitle4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="347" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_info_bannerImage">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Images/services.png"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_addressTitle">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Address :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_address">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Jindal Institute of Medical Sciences Model Town, Hisar &#x2013; 125005 Haryana INDIA"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_phoneTitle">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Phone :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_phone">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="01662&#x2013;221169, 220169, 220511"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_faxTitle">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Fax :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_fax">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="01662&#x2013;221700"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_faxTitle1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Mobile :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_fax1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="9896539128, 9896471111"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_faxTitle2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Email :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_fax2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="info@ncjims.org"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_faxTitle3">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="24 Hrs Emergency Helpline:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_info_faxTitle4">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="9896539132"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panel_admin">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card6"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="label_admin_username" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="tf_admin_username" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="label_admin_password" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="b_admin_login" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="tf_admin_password" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="b_admin_tempLogin" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+                              <Component id="label_admin_adminLogin" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="1213" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                      <Component id="label_admin_adminLogin" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tf_admin_username" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_admin_username" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_admin_password" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_admin_password" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="b_admin_login" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="b_admin_tempLogin" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="703" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_admin_username">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Username"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_admin_password">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Password"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_admin_username">
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="tf_admin_password">
+            </Component>
+            <Component class="javax.swing.JButton" name="b_admin_login">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Login"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_admin_loginActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_admin_adminLogin">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Admin Login"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_admin_tempLogin">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Temp Login"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_admin_tempLoginActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panel_employee">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card6"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="label_emp_empid" min="-2" pref="64" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="tf_emp_empid" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="label_emp_mobile" min="-2" pref="58" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="tf_emp_mobile" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="b_emp_login" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="b_emp_tempLogin" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+                              <Component id="label_emp_empLogin" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="1213" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                      <Component id="label_emp_empLogin" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tf_emp_empid" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_emp_empid" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tf_emp_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_emp_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="b_emp_login" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="b_emp_tempLogin" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="703" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_emp_empid">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="EmpID"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_emp_mobile">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mobile"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_emp_empid">
+            </Component>
+            <Component class="javax.swing.JButton" name="b_emp_login">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Login"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_emp_loginActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_emp_empLogin">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Employee Login"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_emp_mobile">
+            </Component>
+            <Component class="javax.swing.JButton" name="b_emp_tempLogin">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Temp Login"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_emp_tempLoginActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panel_newPatient">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card3"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label_name" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_age" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_mobile" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_disease" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_address" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_date" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_gender" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_bloodGroup" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_maritalStatus" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                      <Component id="cb_maritalStatus" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="cb_bloodGroup" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="tf_date" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rb_male" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="rb_female" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="rb_other" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="tf_address" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="tf_disease" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="tf_mobile" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="tf_age" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="tf_name" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="b_register" min="-2" pref="200" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="b_reset" min="-2" pref="200" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="tf_other_gender" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="tf_other_bloodGroup" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="859" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_age" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_age" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tf_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tf_disease" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_disease" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tf_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_date" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_date" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_gender" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rb_male" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rb_female" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rb_other" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_other_gender" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_bloodGroup" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cb_bloodGroup" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_other_bloodGroup" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cb_maritalStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_maritalStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="b_register" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="b_reset" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="481" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_name">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_age">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Age"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_mobile">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mobile"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_disease">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Disease"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_address">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Address"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_date">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Date (yyyy-mm-dd)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_gender">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Gender"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_bloodGroup">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Blood Group"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_maritalStatus">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Marital Status"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_name">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_nameActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_age">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_ageActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_mobile">
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_disease">
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_address">
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_date">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_dateActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="rb_male">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroup_gender"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Male"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rb_maleActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="rb_female">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroup_gender"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Female"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rb_femaleActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="rb_other">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroup_gender"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Other"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rb_otherActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cb_bloodGroup">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="10">
+                    <StringItem index="0" value="Select"/>
+                    <StringItem index="1" value="O+"/>
+                    <StringItem index="2" value="O-"/>
+                    <StringItem index="3" value="A+"/>
+                    <StringItem index="4" value="A-"/>
+                    <StringItem index="5" value="B+"/>
+                    <StringItem index="6" value="B-"/>
+                    <StringItem index="7" value="AB+"/>
+                    <StringItem index="8" value="AB-"/>
+                    <StringItem index="9" value="Other"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cb_bloodGroupActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cb_maritalStatus">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Select"/>
+                    <StringItem index="1" value="Single"/>
+                    <StringItem index="2" value="Married"/>
+                    <StringItem index="3" value="Divorced"/>
+                    <StringItem index="4" value="Widowed"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_register">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Register"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_registerActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_reset">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Reset"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_resetActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_other_gender">
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tf_other_genderMouseClicked"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="tf_other_gender.setVisible(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_other_bloodGroup">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="tf_other_bloodGroup.setVisible(false);"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panel_oldPatient">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card4"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="label_op_name" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="tf_op_name" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="label_op_mobile" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="b_op_search" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="tf_op_mobile" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                              <Component id="label_op_patientLogin" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="1221" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                      <Component id="label_op_patientLogin" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tf_op_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_op_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_op_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_op_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="b_op_search" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="746" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextField" name="tf_op_name">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_op_name">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_op_mobile">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_op_mobile">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mobile"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_op_search">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Search"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_op_searchActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_op_patientLogin">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Patient Login"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panel_empForm">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card7"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
+                              <Component id="b_empForm_createEmp" min="-2" pref="200" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="label_empForm_name" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="label_empForm_mobile" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="label_empForm_designation" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="label_empForm_empID" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="label_empForm_address" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="label_empForm_noOfLeaves" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="label_empForm_salary" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="label_empForm_totalAttendance" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="label_empForm_resumeFile" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="123" pref="123" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label_empForm_filePath" min="-2" pref="400" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="tf_empForm_name" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_empForm_mobile" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_empForm_designation" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_empForm_empID" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_empForm_address" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_empForm_noOfLeaves" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_empForm_salary" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="tf_empForm_totalAttendance" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="b_empForm_resumeSelect" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="869" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_empForm_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_empForm_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_empForm_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_empForm_mobile" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_empForm_designation" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_empForm_designation" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_empForm_empID" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_empForm_empID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_empForm_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_empForm_address" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_empForm_noOfLeaves" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_empForm_noOfLeaves" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_empForm_salary" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_empForm_salary" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_empForm_totalAttendance" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_empForm_totalAttendance" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_empForm_resumeFile" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="b_empForm_resumeSelect" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="label_empForm_filePath" min="-2" pref="20" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="b_empForm_createEmp" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="475" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_empForm_name">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_empForm_mobile">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mobile"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_empForm_designation">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Designation"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_empForm_empID">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Emp ID"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_empForm_address">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Address"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_empForm_noOfLeaves">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No. of Leaves"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_empForm_salary">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Salary"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_empForm_totalAttendance">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Total Attendance"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_empForm_resumeFile">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Resume File"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_empForm_name">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_empForm_nameActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_empForm_mobile">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_empForm_mobileActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_empForm_designation">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_empForm_designationActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_empForm_empID">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_empForm_empIDActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_empForm_address">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_empForm_addressActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_empForm_noOfLeaves">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_empForm_noOfLeavesActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_empForm_salary">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_empForm_salaryActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_empForm_totalAttendance">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_empForm_totalAttendanceActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_empForm_resumeSelect">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Select..."/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_empForm_resumeSelectActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_empForm_createEmp">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Create Employee"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_empForm_createEmpActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_empForm_filePath">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panel_patientInfo">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card5"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="b_back" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
+                          <Component id="label_nameTag_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_ageTag_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_mobileTag_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_diseaseTag_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_addressTag_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_dateTag_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_genderTag_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_bloodGroupTag_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_maritalStatusTag_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="label_nameData_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_ageData_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_mobileData_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_diseaseData_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_addressData_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_dateData_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_genderData_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_bloodGroupData_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_maritalStatusData_userInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="b_print" min="-2" pref="135" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="1201" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="label_nameData_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_ageData_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_mobileData_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_diseaseData_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_addressData_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_dateData_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_genderData_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_bloodGroupData_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_maritalStatusData_userInfo" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="label_nameTag_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_ageTag_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_mobileTag_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_diseaseTag_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_addressTag_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_dateTag_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_genderTag_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_bloodGroupTag_userInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_maritalStatusTag_userInfo" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="b_back" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="b_print" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="531" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_nameTag_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_ageTag_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Age"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_mobileTag_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mobile"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_diseaseTag_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Disease"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_addressTag_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Address"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_dateTag_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Date (yyyy-mm-dd)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_genderTag_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Gender"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_bloodGroupTag_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Blood Group"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_maritalStatusTag_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Marital Status"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_nameData_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Unavailable"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_ageData_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Unavailable"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_mobileData_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Unavailable"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_diseaseData_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Unavailable"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_addressData_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Unavailable"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_dateData_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Unavailable"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_genderData_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Unavailable"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_bloodGroupData_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Unavailable"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_maritalStatusData_userInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Unavailable"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_back">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Back"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_backActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="b_print">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Print"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_printActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panel_employeeList">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card10"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jScrollPane2" pref="1489" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="519" max="-2" attributes="0"/>
+                      <Component id="label_employeeList" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="label_employeeList" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="457" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="table_employeeTable">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="9" rowCount="0">
+                        <Column editable="true" title="EmpCode" type="java.lang.Object"/>
+                        <Column editable="true" title="Name" type="java.lang.Object"/>
+                        <Column editable="true" title="Mobile" type="java.lang.Object"/>
+                        <Column editable="true" title="Designation" type="java.lang.Object"/>
+                        <Column editable="true" title="EmpID" type="java.lang.Object"/>
+                        <Column editable="true" title="Address" type="java.lang.Object"/>
+                        <Column editable="true" title="No of Leaves" type="java.lang.Object"/>
+                        <Column editable="true" title="Salary" type="java.lang.Object"/>
+                        <Column editable="true" title="Total Attendance" type="java.lang.Object"/>
+                      </Table>
+                    </Property>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                      </TableColumnModel>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="table_employeeTableMouseReleased"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="label_employeeList">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="EMPLOYEE LIST"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panel_patientsList">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card9"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jScrollPane1" pref="1489" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="523" max="-2" attributes="0"/>
+                      <Component id="label_patientsList" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="label_patientsList" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="456" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="table_patientsTable">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="10" rowCount="0">
+                        <Column editable="false" title="PatientID" type="java.lang.Object"/>
+                        <Column editable="false" title="Name" type="java.lang.Object"/>
+                        <Column editable="false" title="Age" type="java.lang.Object"/>
+                        <Column editable="false" title="Mobile" type="java.lang.Object"/>
+                        <Column editable="false" title="Disease" type="java.lang.Object"/>
+                        <Column editable="false" title="Address" type="java.lang.Object"/>
+                        <Column editable="false" title="Date" type="java.lang.Object"/>
+                        <Column editable="false" title="Gender" type="java.lang.Object"/>
+                        <Column editable="false" title="Blood Group" type="java.lang.Object"/>
+                        <Column editable="false" title="Marital Status" type="java.lang.Object"/>
+                      </Table>
+                    </Property>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                      </TableColumnModel>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="table_patientsTableMouseReleased"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="label_patientsList">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="PATIENTS LIST"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
